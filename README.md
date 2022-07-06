@@ -1,6 +1,6 @@
 # Simple Invoice
 
-This is a simple invoicing program written in Python using Jinja2 for the HTML templating and WeasyPrint for the HTML > PDF conversion.
+This is a simple invoicing command line utility written in Python using Jinja2 for the HTML templating and WeasyPrint for the HTML > PDF conversion.
 I use this for all of my current invoicing needs.
 
 ## How to use
