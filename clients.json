@@ -1,0 +1,13 @@
+{
+  "clients": [
+    {
+      "firstName": "John",
+      "lastName": "Doe",
+      "companyName": "John Doe",
+      "address_1": "135 Piano Lane",
+      "address_2": "Auckland",
+      "email": "example@email.com",
+      "rate": 50
+    }
+  ]
+}

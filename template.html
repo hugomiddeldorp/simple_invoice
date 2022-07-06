@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport"/>
+  <!-- Bootstrap CSS -->
+  <link href="style.css" rel="stylesheet"/>
+  <title>
+  </title>
+ </head>
+ <body>
+  <header>
+   <table>
+    <tbody>
+     <tr>
+      <td>
+          <img alt="" src="{{ config.logo }}"/>
+      </td>
+      <td class="r-align">
+       <h1>
+        INVOICE
+       </h1>
+       <h2> 
+           # {{ invoice_number }}
+       </h2>
+      </td>
+     </tr>
+    </tbody>
+   </table>
+  </header>
+  <div class="content">
+   <table>
+    <tbody>
+     <tr>
+      <td>
+       <h2>
+           {{ config.name }}
+       </h2>
+       <p>
+       {{ config.address_1 }}
+        <br/>
+        {{ config.address_2 }}
+        <br/>
+        {{ config.phone }}
+       </p>
+       <p>
+       <a href="maito:{{ config.email }}">
+           {{ config.email }}
+        </a>
+       </p>
+      </td>
+      <td class="client_info">
+       <h2>
+        Billed to
+       </h2>
+       <p id="client_name">
+       {{ client.companyName }}
+       </p>
+       <p id="client_address1">
+       {{ client.address_1 }}
+       </p>
+       <p id="client_address2">
+       {{ client.address_2 }}
+       </p>
+       <p class="client_email">
+       <a href="mailto:{{ client.email }}" id="client_email">
+           {{ client.email }}
+        </a>
+       </p>
+      </td>
+     </tr>
+    </tbody>
+   </table>
+   <table class="price">
+    <thead>
+     <tr>
+      <th>
+       Description
+      </th>
+      <th>
+       Rate
+      </th>
+      <th>
+       Number
+      </th>
+      <th>
+       Subtotal
+      </th>
+     </tr>
+    </thead>
+    <tbody>
+        {{ table }}
+    </tbody>
+   </table>
+  </div>
+  <div class="total">
+   <table>
+    <tbody>
+     <tr>
+      <td>
+       <h2>
+        Account Number
+       </h2>
+       <h3>
+           {{ config.account_number }}
+       </h3>
+      </td>
+      <td>
+       <h2>
+        Total amount
+       </h2>
+       <h3 id="total">
+           $ {{ total }}
+       </h3>
+      </td>
+     </tr>
+    </tbody>
+   </table>
+  </div>
+  <footer id="footer">
+      Invoice sent on {{ date }}
+  </footer>
+ </body>
+</html>
